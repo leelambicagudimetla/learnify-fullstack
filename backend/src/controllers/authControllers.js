@@ -89,7 +89,8 @@ const login = async(req, res) => {
             user:{
                 id: findingemail._id,
                 name:findingemail.name,
-                email:findingemail.email
+                email:findingemail.email,
+                role:findingemail.role,
             }
         })
 

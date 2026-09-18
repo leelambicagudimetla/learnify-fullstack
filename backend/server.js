@@ -2,12 +2,13 @@ const express = require("express");
 const connectDB = require("./src/config/db");
 require("dotenv").config();
 const authRoute = require("./src/router/authRouter");
-
+const courseRouter = require("./src/router/courseRouter");
 
 const app = express();
 app.use(express.json());
 
 app.use("/api/auth",authRoute);
+app.use("/api",courseRouter);
 
 connectDB();
 
